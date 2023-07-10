@@ -11,7 +11,7 @@ spec:
   project: root
   sources:
   - path: app-configs/development/root
-    repoURL: https://github.com/albmtez/argocd-test.git
+    repoURL: https://github.com/albmtez/argocd-declarative-template.git
     targetRevision: HEAD
   syncPolicy:
     automated:
