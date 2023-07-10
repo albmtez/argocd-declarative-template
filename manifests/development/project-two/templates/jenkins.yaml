@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: jenkins-project-two
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: project-two
+  project: project-two
+  source:
+    chart: jenkins
+    repoURL: https://charts.jenkins.io
+    targetRevision: 4.3.30
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
