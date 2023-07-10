@@ -10,7 +10,7 @@ spec:
     namespace: argocd
   project: root
   sources:
-  - path: app-configs/development/root
+  - path: app-configs/development/root/
     repoURL: https://github.com/albmtez/argocd-declarative-template.git
     targetRevision: HEAD
   syncPolicy:

@@ -46,3 +46,16 @@ Apply the root configuration to the environment:
 ```bash
 helm template bootstraping/${env}/root | kubectl apply -f -
 ```
+
+This will create the application in Argo CD to manage itself. We can now let Helm know that it is not managing Argo CD anymore:
+
+```bash
+kubectl delete secret -l owner=helm,name=argo-cd
+```
+
+When listing helm releases it should now show an empty list:
+
+```
+❯ helm list
+NAME    NAMESPACE       REVISION        UPDATED STATUS  CHART   APP VERSION
+```

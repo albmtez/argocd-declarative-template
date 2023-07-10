@@ -11,7 +11,7 @@ spec:
     namespace: argocd
   project: root
   source:
-    path: bootstraping/development/argo-cd
+    path: bootstraping/development/argo-cd/
     repoURL: https://github.com/albmtez/argocd-declarative-template.git
     targetRevision: HEAD
   syncPolicy:
